@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react';
 import IngredientsList from './IngredientsList';
+import { RecipeContext } from './App';
 
 export default function Recipie(props) {
+	const { handleRecipeDelete } = useContext(RecipeContext);
+
 	const {
 		id,
 		name,
@@ -9,7 +12,6 @@ export default function Recipie(props) {
 		servings,
 		instructions,
 		ingredients,
-		handleRecipeDelete,
 	} = props;
 
 	return (
